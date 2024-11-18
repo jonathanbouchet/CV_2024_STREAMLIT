@@ -1,5 +1,5 @@
 from pydantic_settings import BaseSettings, SettingsConfigDict
-from pydantic import SecretStr, field_serializer
+from pydantic import BaseModel, SecretStr, field_serializer, Field, EmailStr
 
 class FirebaseSettings(BaseSettings):
     """model to define the firebase connection settings
@@ -23,3 +23,14 @@ class FirebaseSettings(BaseSettings):
     @field_serializer('project_id', 'private_key_id', 'private_key', 'client_email', 'client_id', 'client_x509_cert_url')
     def dump_secret(self, v):
         return v.get_secret_value()
+    
+
+class Form(BaseModel):
+    """a simple validation form
+
+    :param _type_ BaseModel: _description_
+    """
+    name: str = Field(description="the name of the user", min_length=1)
+    email: EmailStr = Field(description="the email of the user")
+    comment: str | None = Field(default = None, description="the comment left by the user")
+    time: str = Field(description="the time at which the comment what made")
