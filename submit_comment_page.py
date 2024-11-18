@@ -3,6 +3,9 @@ from pydantic import BaseModel, EmailStr, Field, ValidationError
 from datetime import datetime
 import db
 import models
+from logger import logger
+
+logger.info("submit comment page")
 
 if "formbtn_state" not in st.session_state:
     st.session_state.formbtn_state = False
@@ -29,6 +32,7 @@ with st.form(key = 'user_info'):
             # st.json(payload)
             try:
                 res = db.write_to_db(payload=payload)
+                logger.info("comment submitted")
                 # print(res)
             except Exception as e:
                 print(e)

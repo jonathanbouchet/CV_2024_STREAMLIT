@@ -1,4 +1,7 @@
 import streamlit as st
+from logger import logger
+
+logger.info("portfolio page")
 
 with open("assets/data_analysis.md", "r") as f:
     data_analysis = f.read()

@@ -1,5 +1,8 @@
 import streamlit as st
 import base64
+from logger import logger
+
+logger.info("about page")
 
 st.markdown("# About Me")
 st.write(

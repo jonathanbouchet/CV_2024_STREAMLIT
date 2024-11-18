@@ -1,4 +1,7 @@
 import streamlit as st
+from logger import logger
+
+logger.info("resume page")
 
 with open("assets/work_exp.md", "r") as f:
     data_work = f.read()
