@@ -50,7 +50,11 @@ class FirebaseSettings(BaseSettings):
     def dump_secret(self, v):
         return v.get_secret_value()
 ```
+## Build Documentation
+```
+mkdocs build
+mkdocs serve -a localhost:8001
+```
 
 ## TO DO
-- add `mkdocs`
 - add testing
