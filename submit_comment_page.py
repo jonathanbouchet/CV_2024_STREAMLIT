@@ -16,7 +16,7 @@ class Form(BaseModel):
 if "formbtn_state" not in st.session_state:
     st.session_state.formbtn_state = False
     
-st.subheader("Request / Feeeback / Comments")
+st.subheader("Request / Feedback / Comments")
 with st.form(key = 'user_info'):
     st.write('Some Information about you')
 
@@ -36,7 +36,7 @@ with st.form(key = 'user_info'):
             payload = submit_form_pydantic.model_dump()
             # st.json(payload)
             try:
-                res = write_to_db(payload=payload, collection_name="DB_COMMENTS")
+                res = write_to_db(payload=payload)
                 # print(res)
             except Exception as e:
                 print(e)

@@ -1,32 +1,9 @@
-from pydantic_settings import BaseSettings, SettingsConfigDict
-from pydantic import SecretStr, field_serializer
 from firebase_admin import firestore
 from firebase_admin import credentials
 import firebase_admin
 import streamlit as st
+import models
 
-class FirebaseSettings(BaseSettings):
-    """model to define the firebase connection settings
-
-    :param  BaseSettings:
-    """
-    type : str| None = None
-    project_id: SecretStr | None = None
-    private_key_id: SecretStr | None = None
-    private_key: SecretStr| None = None
-    client_email: SecretStr| None = None
-    client_id: SecretStr| None = None
-    auth_uri: str| None = None
-    token_uri: str| None = None
-    auth_provider_x509_cert_url: str| None = None
-    client_x509_cert_url: SecretStr| None = None
-    universe_domain: str| None = None
-
-    model_config = SettingsConfigDict(env_file=".env.firebase")
-
-    @field_serializer('project_id', 'private_key_id', 'private_key', 'client_email', 'client_id', 'client_x509_cert_url')
-    def dump_secret(self, v):
-        return v.get_secret_value()
 
 @st.cache_resource
 def set_db() -> None:
@@ -37,7 +14,7 @@ def set_db() -> None:
      # set Firestore Database credentials
     if not st.session_state["db_initialized"]:
         print("in set_db")
-        config_firebase = FirebaseSettings()
+        config_firebase = models.FirebaseSettings()
         print(f"firebase config: {config_firebase}")
         config_firebase_deserialized = config_firebase.model_dump()
         # print(f"firebase config deserialized: {config_firebase_deserialized}")
@@ -62,18 +39,17 @@ def set_db() -> None:
     # firebase_admin.initialize_app(cred,  {"storageBucket": credential_values["storageBucket"]})
 
 
-def write_to_db(payload: dict, collection_name: str) -> str:
+def write_to_db(payload: dict) -> str:
     """write user comment to database
 
     :param dict payload: _description_
-    :param str collection_name: _description_
     :return str: _description_
     """
     if st.session_state["db_initialized"]:
         # print(f"in write_to_db, payload: {payload}, db col: {collection_name}")
         try:
             db = firestore.client()
-            doc_ref = db.collection(f"{collection_name}").document()  # create a new document.ID
+            doc_ref = db.collection("DB_COMMENTS").document()  # create a new document.ID
             doc_ref.set(payload)  # add obj to collection
             db.close()
             return "comment submitted"
