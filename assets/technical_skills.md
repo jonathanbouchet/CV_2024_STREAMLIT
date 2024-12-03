@@ -1,6 +1,6 @@
-- Programming Languages: Python | R Programming | C++
-- Data analysis: ROOT | NumPy, Scikit | Pandas
-- Software: Linux | UNIX | R studio | Spark
-- Databases: SQL(intermediate), MongoDb(intermediate)
-- Front end: React(beginner to intermediate), Vue(beginner to intermediate)
-- Back end: FastAPI, Google GCS
+- Key Competencies: Machine Learning, Data Analysis and Visualization, Mentoring, Communication
+- Programming: Python, R, SQL
+- Machine Learning Platforms: TensorFlow, PyTorch, Scikit-Learn
+- Cloud Platforms: AWS, Google GCS
+- Libraries / tools: Numpy, Pandas, Spark
+- Front End Development: Vue, React, Jinja2

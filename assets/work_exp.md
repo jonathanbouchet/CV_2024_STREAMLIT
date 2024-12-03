@@ -26,15 +26,3 @@ Lead Data Scientist
 Senior Research Scientist                            
 - Managed software for the Silicon Strip Detector, developing and maintaining code for raw data evaluation.
 - Analyzed particle identification data from the STAR experiment at Brookhaven National Laboratory using machine learning algorithms.
-                     
-# Education
-- Oct 2007 Doctor of Philosophy (Ph.D.) in Nuclear Physics 
-FACULTÉ DES SCIENCES, UNIVERSITÉ DE NANTES, NANTES, FRANCE
-                             
-# Technical Skills
-- Key Competencies: Machine Learning, Data Analysis and Visualization, Mentoring, Communication
-- Programming: Python, R, SQL
-- Machine Learning Platforms: TensorFlow, PyTorch, Scikit-Learn
-- Cloud Platforms: AWS, Google GCS
-- Libraries / tools: Numpy, Pandas, Spark
-- Front End Development: Vue, React, Jinja2
