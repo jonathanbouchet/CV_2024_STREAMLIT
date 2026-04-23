@@ -1,4 +1,16 @@
-### OMNISCIENCE STRATEGIES, July 2023 - Present
+
+### INVISIBLE TECHNOLOGIES, May 2025 – Present
+Senior Applied AI Engineer
+
+- Built and shipped a multi-agent LLM system (LangGraph) enabling natural language interaction with enterprise data (planner, data scientist, KPI, and dashboard agents).
+- Designed tool-augmented agents (Text2SQL) integrating structured data access via FastAPI-based MCP servers.
+- Developed RAG pipelines at scale (700+ tables) using AstraDB and Milvus, replacing prompt-based approaches with retrieval-driven systems.
+- Implemented evaluation frameworks for RAG systems (RAGAS) and internal tooling (Streamlit) to measure retrieval and answer quality.
+- Built data quality systems tracking transformations and metrics across pipeline layers, exposed via agent-accessible services.
+- Developed data pipelines (PySpark, Databricks Jobs) for computer vision outputs (GCS → DBX), supporting manufacturing analytics use cases.
+- Collaborated with engineers and forward-deployed teams to productionize systems; contributed to code reviews and technical design.
+
+### OMNISCIENCE STRATEGIES, July 2023 - Dec 2025
 Director of Data Science
 - Developed virtual agents for life and Medicare insurance sales and form-filling as part of a new venture spinout.
 - Evaluated LLM technologies for a large fintech company in the financial education space, focusing on RAG, security and compliance, prompt optimization, and voice applications.

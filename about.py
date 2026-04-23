@@ -7,7 +7,7 @@ logger.info("about page")
 st.markdown("# About Me")
 st.write(
     """Customer oriented data scientist with proven ability of delivering valuable insights via data analytics.                    
-    7+ years of professional experience in developing cutting-edge machine learning solutions for insurance leaders"""
+    9+ years of professional experience in developing cutting-edge machine learning solutions for insurance leaders"""
 )
 
 left_co, cent_co,last_co = st.columns(3)

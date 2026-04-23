@@ -3,4 +3,3 @@
 - Machine Learning Platforms: TensorFlow, PyTorch, Scikit-Learn
 - Cloud Platforms: AWS, Google GCS
 - Libraries / tools: Numpy, Pandas, Spark
-- Front End Development: Vue, React, Jinja2
