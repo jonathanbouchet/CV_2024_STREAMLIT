@@ -3,5 +3,5 @@
 - AI systems: LLM's, RAG, Multi-Agent Systems, Evaluation
 - Cloud Platforms: AWS, Google GCS
 - Backend: Python, FastAPI
-- Databases: MongDB, SQL
-- Libraries / tools: Numpy, Pandas, Spark, LanGraph
+- Databases: MongoDB, SQL
+- Libraries / tools: Numpy, Pandas, Spark, LangGraph

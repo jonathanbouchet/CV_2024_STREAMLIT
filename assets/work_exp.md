@@ -10,7 +10,7 @@ Senior Applied AI Engineer
 - Developed data pipelines (PySpark, Databricks Jobs) for computer vision outputs (GCS → DBX), supporting manufacturing analytics use cases.
 - Collaborated with engineers and forward-deployed teams to productionize systems; contributed to code reviews and technical design.
 
-### OMNISCIENCE STRATEGIES, July 2023 - Dec 2025
+### OMNISCIENCE STRATEGIES, July 2023 - Dec 2024
 Director of Data Science
 - Developed virtual agents for life and Medicare insurance sales and form-filling as part of a new venture spinout.
 - Evaluated LLM technologies for a large fintech company in the financial education space, focusing on RAG, security and compliance, prompt optimization, and voice applications.

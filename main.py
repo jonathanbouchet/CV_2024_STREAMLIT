@@ -14,11 +14,21 @@ st.set_page_config(layout="wide",
 #       db.set_db()
 #       st.session_state["db_initialized"] = True
 
+with open("assets/JB-Resume-2026.pdf", "rb") as pdf_file:
+    PDFbyte = pdf_file.read()
+
 about_page = st.Page("about.py", title="About Jonathan")
 resume_page = st.Page("resume.py", title="My Resume")
 portfolio_page = st.Page("portfolio.py", title="My Portfolio")
 # comment_page = st.Page("submit_comment_page.py", title="Comment")
 # chatbot_page = st.Page("chatbot.py", title="Ask Me Anything")
+
+st.sidebar.download_button(label="Download resume (pdf)",
+                    data=PDFbyte,
+                    file_name="test.pdf",
+                    mime='application/octet-stream')
+
+st.sidebar.divider()
 
 if __name__ == "__main__":
     pg = st.navigation([about_page, resume_page, portfolio_page])
